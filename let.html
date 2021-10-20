@@ -1,0 +1,51 @@
+<!-- ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准，已经在2015年6月正式发布了。Mozilla公司将在这个标准的基础上，推出JavaScript 2.0。
+简单来说，ECMAScript是JavaScript语言的国际标准，JavaScript是ECMAScript的实现。
+ECMAScript 发生了什么变化？
+编程语言 JavaScript 是 ECMAScript 的实现和扩展，由 ECMA（一个类似 W3C 的标准组织）参与进行标准化。ECMAScript 定义了：
+语言语法 – 语法解析规则、关键字、语句、声明、运算符等。
+类型 – 布尔型、数字、字符串、对象等。
+原型和继承
+内建对象和函数的标准库 – JSON 、 Math 、数组方法、对象自省方法等。 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>let</title>
+</head>
+<body>
+    <script>
+        //声明变量的格式
+        let a;
+        let b,c,d;
+        let e=100;
+        let f=521,g='iloveyou',h=[];
+        //let声明变量的特性:
+        //1.变量不能重复声明,在网页console控制台可以查看会报错：不能重复声明。而使用var是可以的。
+        let star='罗志祥';
+        //let star='小猪';  //'star' has already been declared
+        //2.块儿级作用域     全局，函数，eval作用域
+        {
+            let girl='周扬青';
+            console.log(girl);
+        }
+        //console.log(girl); //报错，girl没有定义
+        //3.不存在变量提升
+        //console.log(song);
+       // var song='恋爱达人';  //变量未定义
+       //let song='恋爱达人'; //不允许在没声明之前使用
+       //4.不影响作用域链
+       {
+           let school='尚硅谷';
+           function fn(){
+               console.log(school);
+           }
+           fn();
+       }
+
+
+    </script>
+</body>
+</html>
